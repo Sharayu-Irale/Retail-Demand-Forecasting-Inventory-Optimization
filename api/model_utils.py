@@ -70,6 +70,12 @@ def train_model():
     if processed_data is None:
         prepare_data()
 
+    # Use a sample of data for faster & stable training on Render
+    processed_data_sample = processed_data.sample(
+        n=min(20000, len(processed_data)),
+        random_state=42
+    )
+
     X = processed_data[NUM_FEATURES + CAT_FEATURES]
     y = processed_data['Units Sold']
 
@@ -81,10 +87,10 @@ def train_model():
     )
 
     model = RandomForestRegressor(
-        n_estimators=100,
-        max_depth=15,
-        random_state=42,
-        n_jobs=-1
+    n_estimators=30,
+    max_depth=10,
+    random_state=42,
+    n_jobs=1
     )
 
     pipeline_model = Pipeline(steps=[
