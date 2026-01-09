@@ -5,6 +5,13 @@ retail/
 __pycache__/
 *.pyc
 
-# Environment variables
-.env
- 
+# Jupyter
+.ipynb_checkpoints/
+/*.ipynb
+
+# Local-only docs
+WORKFLOW.txt
+Retail_Inventory.pdf
+
+# OS files
+.DS_Store
