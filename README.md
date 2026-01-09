@@ -259,6 +259,17 @@ The FastAPI application is deployed on **Render** as a cloud-hosted web service.
 Swagger UI is available for interactive API testing after deployment.
 
 ---
+---
+
+## 🌍 Live API
+
+The FastAPI application is deployed on Render.
+
+- Base URL: https://retail-demand-forecasting-inventory.onrender.com
+- Swagger UI: https://retail-demand-forecasting-inventory.onrender.com/docs
+
+---
+---
 
 ## 📈 Future Enhancements
 
