@@ -1,9 +1,13 @@
+from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = BASE_DIR / "data" / "retail_store_inventory.csv"
 
 # Global objects (kept in memory)
 pipeline_model = None
@@ -25,7 +29,7 @@ CAT_FEATURES = [
 def prepare_data():
     global processed_data
 
-    data = pd.read_csv("data/retail_store_inventory.csv")
+    data = pd.read_csv(DATA_PATH)
     data['Date'] = pd.to_datetime(data['Date'], dayfirst=True)
     data = data.drop(columns=['Demand Forecast'], errors='ignore')
 
