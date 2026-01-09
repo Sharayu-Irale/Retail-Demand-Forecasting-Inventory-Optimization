@@ -202,7 +202,9 @@ The project includes a **FastAPI-based REST API** that exposes the demand foreca
   "store_id": "S001",
   "product_id": "P0001"
 }
+```
 
+---
 
 ## 🚀 How to Run This Project (Local Setup)
 
@@ -210,4 +212,65 @@ The project includes a **FastAPI-based REST API** that exposes the demand foreca
 ```bash
 git clone https://github.com/Sharayu-Irale/Retail-Demand-Forecasting-Inventory-Optimization.git
 cd Retail-Demand-Forecasting-Inventory-Optimization
+```
 
+---
+
+### 2️⃣ Create & Activate Virtual Environment
+```bash
+python -m venv retail
+retail\Scripts\activate
+```
+
+---
+
+### 3️⃣ Install Dependencies
+```bash
+cd api
+pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Run the FastAPI Application
+```bash
+python -m uvicorn main:app --reload
+```
+
+---
+
+### 5️⃣ Access Swagger UI
+Open your browser and go to:
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### 6️⃣ API Usage Flow
+1. Call **POST `/train`** (no request body) to train the model  
+2. Call **POST `/predict-inventory`** with store and product IDs  
+
+---
+
+## ☁️ Deployment
+
+The FastAPI application is deployed on **Render** as a cloud-hosted web service.  
+Swagger UI is available for interactive API testing after deployment.
+
+---
+
+## 📈 Future Enhancements
+
+- Supplier-specific lead times  
+- Cost-based EOQ optimization  
+- Advanced models (XGBoost / LightGBM)  
+- Model persistence using joblib  
+- Dockerization and CI/CD pipeline  
+- Real-time demand forecasting dashboards  
+
+---
+
+## 👤 Author
+
+**Sharayu Irale**
