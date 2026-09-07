@@ -1,4 +1,4 @@
-# 🛒 Retail Demand Forecasting & Inventory Optimization System
+# 🛒 Retail Sales Forecasting & Inventory Risk Decision Support System
 
 ## 📌 Project Overview
 
